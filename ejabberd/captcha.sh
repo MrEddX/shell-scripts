@@ -16,9 +16,9 @@
 
 INPUT=$1
 
-red=$(shuf -i 150-255 -n 1)
-green=$(shuf -i 150-255 -n 1)
-blue=$(shuf -i 150-255 -n 1)
+red=$(shuf -i 190-240 -n 1)
+green=$(shuf -i 190-240 -n 1)
+blue=$(shuf -i 190-240 -n 1)
 
 COLOR="rgb($red,$green,$blue)"
 
@@ -98,4 +98,4 @@ convert -size 180x60 xc:none -pointsize 40 \
         -strokewidth 2 -draw "line 0,$W2_LINE_START_Y 140,$W2_LINE_STOP_Y" \
         -strokewidth 2 -draw "line 0,$W3_LINE_START_Y 140,$W3_LINE_STOP_Y" \
         -wave "$WAVE3_AMPLITUDE"x"$WAVE3_LENGTH" \) \
-        -flatten -crop 190x60 +repage -quality 90 -depth 8 png:-
+        -flatten -crop 132x48 +repage -quality 90 -depth 8 png:-
